@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <NICK NASTA ALEX SILVA/> -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullScreenActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/previousImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="236dp"
+        android:clickable="true"
+        app:backgroundTint="@color/black_overlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="236dp"
+        android:clickable="true"
+        app:backgroundTint="@color/black_overlay"
+        app:backgroundTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="379dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="387dp"
+                android:contentDescription="@string/fullscreen"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="70dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/peopleTags"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:contentDescription="@string/peopleTextView"
+                android:text="@string/peopleTextView"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="177dp" />
+
+            <TextView
+                android:id="@+id/locationTags"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:contentDescription="@string/locationsTextView"
+                android:text="@string/locationsTextView" />
+
+            <EditText
+                android:id="@+id/editTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/editTag"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="65dp"
+                    android:layout_height="63dp" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/saveTagButton"
+                    android:text="@string/saveTagButton" />
+
+                <Space
+                    android:layout_width="73dp"
+                    android:layout_height="63dp" />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cancelTagButton"
+                    android:onClick="cancel"
+                    android:text="@string/cancelTagButton" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="37dp"
+                    android:layout_height="65dp" />
+
+                <Button
+                    android:id="@+id/addLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/addLoctationButton"
+                    android:onClick="addLocation"
+                    android:text="@string/addLoctationButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/photoToolbar"
+                    app:layout_constraintEnd_toEndOf="@+id/photoToolbar"
+                    app:layout_constraintHorizontal_bias="0.473"
+                    app:layout_constraintStart_toEndOf="@+id/addPerson"
+                    app:layout_constraintTop_toTopOf="@+id/photoToolbar" />
+
+                <Button
+                    android:id="@+id/addPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="48dp"
+                    android:contentDescription="@string/addPersonButton"
+                    android:onClick="addPerson"
+                    android:text="@string/addPersonButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/photoToolbar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/photoToolbar" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="30dp" />
+
+                <Button
+                    android:id="@+id/removeLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/removeLocationButton"
+                    android:onClick="removeLocation"
+                    android:text="@string/removeLocationButton" />
+
+                <Space
+                    android:layout_width="33dp"
+                    android:layout_height="26dp" />
+
+                <Button
+                    android:id="@+id/removePerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/removePersonButton"
+                    android:onClick="removePerson"
+                    android:text="@string/removePersonButton" />
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <NICK NASTA ALEX SILVA/> -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Android45"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/editAlbumName"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="346dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:windowSoftInputMode="stateAlwaysVisible"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/photoToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/addSearchAlbum"
+        app:layout_constraintStart_toStartOf="@+id/mainListView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/mainListView"
+        android:layout_width="371dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="39dp"
+        android:listSelector="@android:color/darker_gray"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toTopOf="@+id/saveAlbum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <Button
+        android:id="@+id/saveAlbum"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="27dp"
+        android:contentDescription="@string/saveAlbum"
+        android:text="@string/saveEdit"
+        android:windowSoftInputMode="adjustNothing"
+        app:layout_constraintBottom_toTopOf="@+id/photoToolbar"
+        app:layout_constraintEnd_toStartOf="@+id/cancelEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainListView" />
+
+    <Button
+        android:id="@+id/cancelEdit"
+        android:layout_width="81dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="134dp"
+        android:contentDescription="@string/cancelEdit"
+        android:text="@string/cancellEdit"
+        android:windowSoftInputMode="adjustNothing"
+        app:layout_constraintBottom_toBottomOf="@+id/saveAlbum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveAlbum"
+        app:layout_constraintTop_toTopOf="@+id/saveAlbum" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/photoToolbar"
+        android:layout_width="427dp"
+        android:layout_height="82dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="0dp"
+        android:theme="?attr/actionBarTheme"
+        android:windowSoftInputMode="adjustPan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveAlbum"
+        tools:layout_editor_relativeX="0dp"
+        tools:layout_editor_relativeY="444dp" />
+
+    <ImageButton
+        android:id="@+id/addSearchAlbum"
+        android:layout_width="71dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="19dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/addAlbum"
+        android:onClick="addAlbum"
+        app:layout_constraintBottom_toBottomOf="@+id/openPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toTopOf="@+id/openPhoto"
+        app:layout_constraintVertical_bias="0.142"
+        android:windowSoftInputMode="adjustNothing"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/ser"
+        android:onClick="searchAlbum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delSearchPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainListView"
+        app:layout_constraintVertical_bias="1.0"
+        android:windowSoftInputMode="adjustNothing"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <ImageButton
+        android:id="@+id/openPhoto"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/editAlbum"
+        android:onClick="editAlbum"
+        app:layout_constraintBottom_toBottomOf="@+id/delSearchPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/addSearchAlbum"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/delSearchPhoto"
+        app:layout_constraintTop_toTopOf="@+id/delSearchPhoto"
+        app:layout_constraintVertical_bias="0.75"
+        android:windowSoftInputMode="adjustNothing"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/delSearchPhoto"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/delAlbum"
+        android:onClick="delAlbum"
+        app:layout_constraintBottom_toBottomOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toTopOf="@+id/search"
+        app:layout_constraintVertical_bias="0.619"
+        android:windowSoftInputMode="adjustNothing"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="444dp" />
+
+</android.support.constraint.ConstraintLayout>

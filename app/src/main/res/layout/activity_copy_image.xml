@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <NICK NASTA ALEX SILVA/> -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CopyImageActivity">
+
+    <ListView
+        android:id="@+id/albumList"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:listSelector="@android:color/darker_gray"
+        android:isScrollContainer="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/copyImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/CopyButton"
+        android:onClick="copyImage"
+        android:text="@string/CopyButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/moveImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/albumList" />
+
+    <Button
+        android:id="@+id/moveImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/MoveButton"
+        android:onClick="moveImage"
+        android:text="@string/MoveButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelCopyButton"
+        app:layout_constraintStart_toEndOf="@+id/copyImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/albumList" />
+
+    <Button
+        android:id="@+id/cancelCopyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/cancelButtonCopy"
+        android:onClick="cancel"
+        android:text="@string/cancelButtonCopy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/albumList" />
+
+</android.support.constraint.ConstraintLayout>

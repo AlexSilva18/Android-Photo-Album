@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Android45</string>
+    <string name="addAlbum">ADD</string>
+    <string name="delAlbum">DEL</string>
+    <string name="editAlbum">EDIT</string>
+    <string name="openAlbum">OPEN</string>
+    <string name="add_an_album">Add an Album</string>
+    <string name="albumtext">Enter Album Name</string>
+    <string name="submit">Submit</string>
+    <string name="error_duplicate_msg">Error Duplicate Album</string>
+    <string name="empty_field">Album Field is Empty</string>
+    <string name="noSelection">No Album Selected</string>
+    <string name="renamesuccess">Album Renamed Successfully</string>
+    <string name="ser">search</string>
+    <string name="saveAlbum">saved</string>
+    <string name="cancelEdit">cancelled</string>
+    <string name="goBack">Back to Albums</string>
+    <string name="clickandhold">Click And Hold Album To Open</string>
+    <string name="cancellEdit">Cancel</string>
+    <string name="saveEdit">Save</string>
+    <string name="title_activity_photo_layout">PhotoLayout</string>
+    <string name="fullscreen">fullscreenImg</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="saveTagButton">Save</string>
+    <string name="editTag">editTag</string>
+    <string name="cancelTagButton">"Cancel "</string>
+    <string name="addLoctationButton">Add Location</string>
+    <string name="addPersonButton">Add Person</string>
+    <string name="removeLocationButton">Remove Location</string>
+    <string name="removePersonButton">Remove Person</string>
+    <string name="locationsTextView">Locations</string>
+    <string name="peopleTextView">People</string>
+    <string name="exit">Exit</string>
+    <string name="Copy">Copy</string>
+    <string name="Move">Move</string>
+    <string name="movePic">movePic</string>
+    <string name="title_activity_copy_image">CopyImageActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="CopyButton">Copy</string>
+    <string name="MoveButton">Move</string>
+    <string name="cancelButtonCopy">Cancel</string>
+    <string name="myAlbums">My Albums</string>
+    <string name="search">Search</string>
+    <string name="search_location">Search Location</string>
+    <string name="search_person">Search Person</string>
+
+</resources>
